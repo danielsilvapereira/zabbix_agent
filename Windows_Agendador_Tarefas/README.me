@@ -1,16 +1,13 @@
 1- colocar na configuração do agente zabbix.
 
-UserParameter=TaskSchedulerMonitoring[*],powershell -NoProfile -ExecutionPolicy Bypass -File "C:\zabbix\discoverytaskmanager.ps1" "$1" "$2"
+UserParameter=tarefasagendadas[*],powershell -NoProfile -ExecutionPolicy Bypass -File "C:\zabbix\discoverytaskmanager.ps1" "$1" "$2"
 
-2- Inserir mna configuração do zabbix agente.
+2- Inserir na configuração do zabbix agente.
 
 UnsafeUserParameters=1
-
 EnableRemoteCommands=1
 
 3- criar uma pasta ou inserir aonde desejar o arquivo power shell.
-
-
 discoverytaskmanager.ps1
 
 
